@@ -22,7 +22,7 @@ using namespace std;
 
 int n, Q;
 int all, cnt = 1;
-int sz[N], depth[N], nxt[N], chain[N], top[N], csz[N], pos[N], pa[N];
+int sz[N], depth[N], nxt[N], chain[N], top[N], pos[N], pa[N];
 ll t[4 * N];
 vector<int> g[N];
 
@@ -74,7 +74,6 @@ void hld (int v, int p) {
     pos[v] = ++all;
     if (top[chain[v]] == 0)
         top[chain[v]] = v;
-    //++csz[chain[v]];
     
     if (nxt[v] != -1)
         hld (nxt[v], v);
